@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/etFirstNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/etSecondNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etFirstNumber"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/btAdd"
+        style="@style/ButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etSecondNumber"
+        android:hint="@string/add"
+        android:layout_marginStart="24dp"/>
+
+    <Button
+        android:id="@+id/btSubtract"
+        style="@style/ButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etSecondNumber"
+        android:layout_toEndOf="@id/btAdd"
+        android:hint="@string/subtract" />
+
+    <Button
+        android:id="@+id/btMultiply"
+        style="@style/ButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etSecondNumber"
+        android:layout_toEndOf="@id/btSubtract"
+        android:hint="@string/multiply" />
+
+    <Button
+        android:id="@+id/btDivide"
+        style="@style/ButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etSecondNumber"
+        android:layout_toEndOf="@id/btMultiply"
+        android:hint="@string/divide" />
+
+    <TextView
+        android:id="@+id/tvResult"
+        style="@style/DisplayStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btAdd"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/result" />
+
+
+</RelativeLayout>
